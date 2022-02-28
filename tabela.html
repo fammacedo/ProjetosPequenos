@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<title>Tabela</title>
+<!-- define a formatação da tabela, linhas de título e conteúdo !-->
+<style>
+table, th, td {border: 1px solid #000;}
+th, td {padding: 10px;}
+.Carro {background:blue;}
+.Categoria {background:green;}
+.Fabricante {background:red;}
+
+</style>
+</head>
+<body>
+<h1>Construindo tabelas</h1>
+<p>
+<table>
+<caption>Fabricante de carros</caption>
+
+<!--Define um grupo de colunas na tabela!-->
+<colgroup>
+<col class= "Fabricante">
+<col class="Carro">
+<col class="Categoria">
+</colgroup>
+
+<!--Linha tr !-->
+<tr>
+<!--Linha de titulo da tabela efeito negrito!-->
+<th>Fabricante</th>
+<th>Carro</th>
+<th>Categoria</th>
+</tr>
+<tr>
+<!--Linha de conteúdo da tabela!-->
+<td>Fiat</td>
+<td>Ferrari</td>
+<td>SEAT</td>
+</tr>
+<tr>
+<td>Popular</td>
+<td>Esportivo Luxo</td>
+<td>Popular</td>
+</tr>
+<tr>
+<!--adiciona o tamanho da célula de três colunas!-->
+<td colspan="3">Total: 3</td>
+</tr>
+
+
+
+
+</body>

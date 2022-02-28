@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+
+<html lang="pt-br">
+	<head>
+		<title>Formulário</title>
+		<meta charset="utf-8">
+	</head>
+	
+<body>
+	<!-- Formulário é possível enviar os dados através do GET ou POST 
+		* metodo GET os dados são enviados de modo visivel através da URL do projeto--
+		* metodo POST os dados são enviados de modo oculto e criptografado
+	-->
+	<form action"teste.txt" method="POST">	
+	<!-- cria um bloco de informações, sendo necessário fechar -->
+	
+	<fieldset>
+	<legend>Informações pessoais</legend>
+	
+	<!-- Parametros permitidos  para os campos
+	
+	* required: torna o campo obrigatorio
+	* autofocus: o campo recebe o foco inicialmente
+	* disabled: desabilita o campo
+	* autocomplete: completa a informação do campo 
+	* placeholder: traz o exemplo de informação que deve ser utilizado no campo
+	
+	-->
+	<div class="corpo"></div>
+	Nome: <br>
+	<input type="text" name="nome" required autofocus autocomplete="on"><br><br>
+	
+	Foto: <br>
+	<!-- carregar arquivo -->
+	<input type="file" name="foto"><br><br>	
+	
+	<!-- permite inserir informações ocultas-->
+	<input type="hidden" name=""id"><br><br>
+
+	Pesquisa:<br>
+	<input type="search" name="pesquisa"><br><br>
+	
+	Telefone:<br>
+	<input type="tel" name="telefone"><br><br>
+	
+	Sexo1:<br>
+	<!-- grupo de seleção de valores
+	* sendo permitido criar uma divisão interna
+	* permite definir um valor padrão usando o selected
+	-->
+	<select name="sexo">
+		<optgroup label="Definidos">
+			<option value="masculino" selected>Masculino</option>
+			<option value="feminino">Feminino</option>
+		</optgroup>
+		<optgroup label="Indefinidos">
+			<option value="naoinformado">Não Informado</option>
+		</optgroup>
+	</select><br><br>
+	
+	Sexo2:<br>
+	<!-- outra maneira de fazer uma lista atraves do datalist
+	* para atrelar a lista aos valores é necessário que o list e id do datalist tenha o mesmo valor
+	* caso o input datalist esteja fora do formulario é necessário acrescentar o parametro ID no form e fazer a referencia dentro do datalist
+	-->
+	<input name="sexo1" list="lista-sexo">
+		<datalist id="lista-sexo">
+			<option value="Masculino">
+			<option value="Feminino">
+		</datalist><br><br>
+		
+	Data:<br>
+	<!-- define um formato de data com o valor minimo e maximo -->
+	<input type="date" name="data" min="2010-10-03" max="2020-10-03"><br><br>
+	
+	Hora:<br>
+	<input type="time" name="hora"><br><br>
+	
+	E-mail: <br>
+	<input type="text" name="email" required autocomplete="on" placeholder="seuemail@provedor.com.br"><br><br>
+	
+	Senha: <br>
+	<input type="password" name="senha"><br><br>
+	
+	Idade: <br>
+	<!-- campo de observacao definindo o numero de linhas e colunas-->
+	<input type="number" name="idade" min="0" max="125"><br><br>
+	
+	Observação:<br>
+	<textarea name="observacao" rows="5" cols="30"></textarea><br><br>
+	
+	Enviar: <br>
+	<!-- botão1-->
+	<input type="submit" name="btn-enviar" value="Enviar"><br><br>
+	
+	<!-- botão2-->
+	<button type="button">Teste</button><br><br>
+	
+	</fieldset>
+	
+</body>
+</html>
